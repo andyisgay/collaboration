@@ -1,0 +1,7 @@
+<h1><%= @post.title %></h1>
+<%= @post.content %>
+<hr>
+<%= link_to '編輯', edit_post_path(@post) %>
+<%= link_to '刪除', @post, method: :delete %>
+<%= link_to '返回', posts_path %>
+

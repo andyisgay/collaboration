@@ -1,0 +1,29 @@
+<!--partial layouts-->
+<strong><%= notice %></strong>
+<ul>
+	<!--<li><a href="/">首頁</a></li>-->
+	<!--<li><a href="<%= root_path %>">首頁</a>/li>-->
+	<%= nav_li '首頁', root_path %><!--正規寫法-->
+    <!--<li><a href="/aboutt">關於</a></li>-->
+    <!--<li><a href="<%= about_path %>">關於</a></li>-->
+    <%= nav_li '關於', about_path %>
+    <!--<li><a href="/math">樂透</a></li>-->
+    <!--<li><a href="<%= math_path %>">樂透</a></li>-->
+    <%= nav_li '樂透', math_path %>
+    <%= nav_li '表單', form_path %>
+    <%= nav_li '文章列表', posts_path %>
+    <%= nav_li '新增文章', new_post_path %>
+</ul>
+<% if user_signed_in? %>
+   你好，<%= current_user.name %> |
+   <%= link_to "登出", session_path, method: :delete %>
+<% else %>
+ <%= form_tag session_path do %>
+  <input type="text" name="email">
+  <input type="password" name="password">
+  <input type="submit" value="登入">
+ <% end %>
+<% end %>
+
+
+
