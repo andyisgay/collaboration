@@ -1,11 +1,12 @@
 Collaboration::Application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   resources :categories
-
   root 'pages#home'
   get :home, :math, :form, controller: :pages
   post :about, controller: :pages
   resources :posts
   resource :session, only: [:create, :destroy]
+  resources :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

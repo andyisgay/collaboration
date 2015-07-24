@@ -15,4 +15,33 @@ li.active > a{
    font-size: 200%;
    color: red;
 }
-ul > li{ display: inline; } /*導覽列美化*/
+
+ul > li{
+        display: inline;  /*導覽列美化*/
+	    background-color:#44c767;
+	    -moz-border-radius:28px;
+	    -webkit-border-radius:28px;
+	    border-radius:28px;
+	    border:1px solid #18ab29;
+	    display:inline-block;
+	    cursor:pointer;
+	    color:#ffffff;
+	    font-family:Arial;
+	    font-size:17px;
+	    padding:16px 31px;
+	    text-decoration:none;
+	    text-shadow:0px 1px 0px #2f6627;
+	  }
+
+ #video-bg {
+position: fixed;
+right: 0;
+bottom: 0;
+width: auto;
+min-width: 100%;
+height: auto;
+min-height: 100%;
+z-index: -100;
+background: transparent url(video-bg.jpg) no-repeat;
+background-size: cover;
+}

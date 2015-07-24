@@ -2,13 +2,24 @@
 <html>
 <head>
   <title>Collaboration</title>
+
+  
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  
+<video autoplay loop muted poster="vid-first-frame.jpg" id="video-bg">
+<source src="http://beta.mattgrossdesign.com/sites/default/files/wood%20autumn-HD.webm" type="video/webm">
+<source src="http://beta.mattgrossdesign.com/sites/default/files/wood%20autumn-HD.mp4" type="video/mp4">
+</video>
+
+
 </head>
 <body>
 
-<%= render 'shared/navbar' %>
+
+
+<%= render 'shared/navbar' %><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <hr>
 
 <%= yield %>

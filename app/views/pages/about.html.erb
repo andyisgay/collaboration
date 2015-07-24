@@ -1,2 +1,8 @@
 <h1>關於本站</h1>
-<h2>歡迎!<%= @name %></h2>
+<h2>歡迎!<%= @user %></h2>
+
+  <% user = User.find_by(name:@name) %>
+  電子郵件：<%= user.email %><br>
+  何時註冊？<%= user.created_at %>
+
+

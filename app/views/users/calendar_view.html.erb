@@ -1,0 +1,7 @@
+<%= calendar @events do |event| %>
+<%= link_to event.name, event %>
+<% end %>
+
+<%= calendar number_of_days: 4 do |date| %>
+  <%= date %>
+<% end %>

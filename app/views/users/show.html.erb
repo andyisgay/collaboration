@@ -1,0 +1,12 @@
+<%= image_tag @user.file.url(:medium) %><br>
+  電子郵件：<%= @user.email %><br>
+  何時註冊？<%= @user.created_at %>
+
+  <%= calendar @events do |event| %>
+<%= link_to event.name, event %>
+
+
+<%= calendar number_of_days: 4 do |date| %>
+  <%= date %>
+<% end %>
+

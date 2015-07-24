@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   #將以上兩方法設定成view helper
   
   def current_user
-  	@current_user ||= User.find_by(session[:user_id])
+  	@current_user ||= User.find_by(id: session[:user_id])
   	#等於 
   	# @current_user = @current_user || User.find_by(session[:user_id])
   	# 實體變數用於快取，為了避免重複對資料庫下指令

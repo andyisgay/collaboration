@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
 	#layout 'admin'
   def home
+    #@user = User.first
   end
 
   def about
@@ -9,6 +10,6 @@ class PagesController < ApplicationController
   end
 
   def math
-  	@numbers = (1..46).to_a.sample(6)
+  	@numbers = (1..49).to_a.sample(6)
   end
 end
